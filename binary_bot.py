@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 def start(update: Update, context: CallbackContext) -> None:
     context.bot.send_message(chat_id=update.effective_chat.id, 
-    text="This bot translates messages into binary using utf-8")
+    text="This bot translates messages to and from binary using utf-8")
 
 def text_to_bits(text, encoding='utf-8', errors='surrogatepass'):
     bits = bin(int.from_bytes(text.encode(encoding, errors), 'big'))[2:]
